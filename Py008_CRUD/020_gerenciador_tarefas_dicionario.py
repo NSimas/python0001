@@ -50,18 +50,24 @@ def menu():
                 listarTarefas(tarefas)
             case "3":
                 listarTarefas(tarefas)
-                try:
-                    tarefa_id = int(input("Digite o ID da tarefa que deseja marcar como concluída: "))
-                    concluirTarefa(tarefas, tarefa_id)
-                except ValueError:
-                    print("Por favor, digite um número válido.")
+                if not tarefas:
+                    print("Não há tarefas para marcar como concluída.")
+                else:
+                    try:
+                        tarefa_id = int(input("Digite o ID da tarefa que deseja marcar como concluída: "))
+                        concluirTarefa(tarefas, tarefa_id)
+                    except ValueError:
+                        print("Por favor, digite um número válido.")
             case "4":
                 listarTarefas(tarefas)
-                try:
-                    tarefa_id = int(input("Digite o ID da tarefa que deseja remover: "))
-                    deletarTarefa(tarefas, tarefa_id)
-                except ValueError:
-                    print("Por favor, digite um número válido.")
+                if not tarefas:
+                    print("Não há tarefas para excluir.")
+                else:
+                    try:
+                        tarefa_id = int(input("Digite o ID da tarefa que deseja remover: "))
+                        deletarTarefa(tarefas, tarefa_id)
+                    except ValueError:
+                        print("Por favor, digite um número válido.")
             case "5":
                 print("Obrigado por usar o Gerenciador de Tarefas. Até mais!")
                 break
