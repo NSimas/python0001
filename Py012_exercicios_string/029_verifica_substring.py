@@ -3,8 +3,8 @@ Escreva um programa em Python para verificar se uma string é uma substring de o
 '''
 
 def verificar_substring():
-    string1 = input("Digite a primeira string: ")
-    string2 = input("Digite a segunda string: ")
+    string1 = input("Digite a primeira string, pra verificar se está contida na próxima: ")
+    string2 = input("Digite a o texto para verificar se contém a primeira substring: ")
     if string1 in string2:
         print(f"{string1} é uma substring de {string2}.")
     else:
