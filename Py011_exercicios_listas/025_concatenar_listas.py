@@ -18,7 +18,7 @@ def uniao_listas():
     print(f"União das listas: {uniao}")
     return uniao
 
-'''def menu():
+def menu():
     while True:
         print("\nMenu:")
         print("1. Digitar mais listas")
@@ -27,7 +27,7 @@ def uniao_listas():
         if escolha in ["1", "2"]:
             return escolha
         else:
-            print("Opção inválida! Tente novamente.")'''
+            print("Opção inválida! Tente novamente.")
 
 def main():
     while True:
